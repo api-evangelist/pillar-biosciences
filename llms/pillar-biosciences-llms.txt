@@ -1,0 +1,93 @@
+# Pillar Biosciences
+
+> generated: 2026-08-26
+> method: generated
+> source: apis.yml + repo artifacts (well-known/, packages/, conformance/, changelog/, lifecycle/, plans/, security/). Pillar Biosciences does not publish its own /llms.txt — https://www.pillarbiosci.com/llms.txt returned HTTP 404 on 2026-08-26.
+
+Pillar Biosciences is a Natick, Massachusetts molecular diagnostics company (founded 2014)
+building targeted next-generation sequencing solutions for precision oncology. Its SLIMamp
+chemistry enables single-tube, highly multiplexed PCR library prep from as little as 2.5 ng of
+DNA. Its oncoReveal panel portfolio spans solid tumour tissue, liquid biopsy, haematologic
+malignancy, BRCA/HRD/methylation and inherited disease. PiVAT (Pillar Variant Analysis Toolkit)
+is the secondary-analysis pipeline that turns sequencer output into variant calls and reports.
+
+## What an agent should know first
+
+**Pillar Biosciences publishes no API.** There is no OpenAPI, no Swagger, no GraphQL endpoint,
+no AsyncAPI, no gRPC/Protobuf, no WSDL, no MCP server, no A2A agent card, and no developer
+portal, SDK or public API reference. This was established by probing every Pillar host on
+2026-08-26 (see well-known/pillar-biosciences-well-known.yml for the full probe table).
+
+PiVAT's real integration surface is **files, not endpoints**: FASTQ (paired-end preferred),
+BAM, VCF and PDF. A laboratory integrates with Pillar by moving those files, not by calling
+an API. The PiVAT application at https://pivat.pillarbiosci.com/ is a React single-page app
+behind a customer login; it answers HTTP 200 with the same 1,535-byte HTML shell for any
+unknown path, so a 200 from that host is never evidence of a document.
+
+## Products
+
+- oncoReveal panels — solid tumour tissue, liquid biopsy (LBx), haematologic/myeloid, pan-cancer,
+  RNA fusion, CNV, BRCA/HRD, methylation. https://www.pillarbiosci.com/products/
+- InheritReveal — inherited disease panels (thalassemia, thalassemia+SMN).
+- PiVAT — secondary bioinformatics analysis; local install or cloud deployment.
+  https://www.pillarbiosci.com/technology/pivat/
+- VersaTile — machine-learning panel-design platform.
+- SLIMamp — the underlying single-tube multiplex PCR chemistry.
+  https://www.pillarbiosci.com/technology/
+
+## Deployment and compliance
+
+- PiVAT runs either as a local install (research use only, for LDT settings) or as a cloud service.
+- Cloud PiVAT is stated by Pillar to be fully compliant with HIPAA requirements.
+- Cloud PiVAT can generate tertiary reports using OncoKB, an FDA-recognized oncology knowledge base.
+- Pillar ships both research-use-only kits and a separate IVD product line.
+- No trust center, no SOC 2 / ISO 27001 attestation, and no security.txt are published.
+
+## Versioning and change history
+
+- PiVAT uses a calendar version scheme, YYYY.MINOR.PATCH. Current published version: 2023.1.0.
+- Change history ships only as revision-controlled PDF release notes
+  (RN-0025 Revision 2, released 2023-07-25) from Pillar's own S3 documentation bucket.
+- There is no web changelog, no feed, and no status page for cloud PiVAT.
+
+## Commercial
+
+- No published pricing of any kind. Direct sales and named distribution partners only.
+- Contact: https://www.pillarbiosci.com/contact/
+- Distribution partners: https://www.pillarbiosci.com/company/distribution-partners/
+
+## Open source
+
+Pillar publishes first-party bioinformatics tools on GitHub — none in any package registry,
+none of them an API client library:
+
+- StateCNV — state-space CNV caller with disease profiling (MIT).
+  https://github.com/Pillar-Biosciences-Inc/StateCNV
+- BayesCNV — Bayesian copy number variant detection (GPL-3.0).
+  https://github.com/Pillar-Biosciences-Inc/BayesCNV
+- BatchDetect — batch heterogeneity detection via likelihoods (GPL-2.0).
+  https://github.com/Pillar-Biosciences-Inc/BatchDetect
+- CustomPerformanceCNV — custom CNV performance notebooks (MIT).
+  https://github.com/Pillar-Biosciences-Inc/CustomPerformanceCNV
+- methylation — Bismark-based methylation sequencing pipeline (GPL-3.0).
+  https://github.com/Pillar-Biosciences-Inc/methylation
+
+None of these carry a git tag or a GitHub release, so there is no version an agent can pin.
+
+## Links
+
+- Website: https://www.pillarbiosci.com/
+- Resources (webinars, publications, posters): https://www.pillarbiosci.com/resources/
+- News: https://www.pillarbiosci.com/company/pillar-news/
+- Privacy policy: https://www.pillarbiosci.com/privacy-policy/
+- GitHub: https://github.com/Pillar-Biosciences-Inc
+- LinkedIn: https://www.linkedin.com/company/pillar-biosciences
+- PiVAT version portal: https://pivat.pillar-biosciences.com/
+- PiVAT application (login required): https://pivat.pillarbiosci.com/
+
+## Not published
+
+No terms of service page (https://www.pillarbiosci.com/terms/ -> 404), no status page, no
+security.txt, no /.well-known/api-catalog, no OpenAPI, no MCP server, no agent card, no SDK,
+no CLI, no sandbox, no rate-limit documentation, no OAuth scopes. Each of these was probed;
+the results are recorded in this repository's artifacts rather than asserted.

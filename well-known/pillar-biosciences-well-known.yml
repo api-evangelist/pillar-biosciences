@@ -1,0 +1,99 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct HTTPS probes of every Pillar Biosciences host discovered in STEP 0b
+  (corporate WordPress site + the PiVAT application hosts), 2026-08-26.
+name: Pillar Biosciences well-known probe
+description: >-
+  RFC 8615 /.well-known/ probe across every Pillar Biosciences host. No host
+  serves any well-known document. The PiVAT application hosts answer 403 for the
+  whole /.well-known/ path space, and pivat.pillarbiosci.com additionally returns
+  a 200 React SPA shell (1,535 bytes, identical for every unknown path) for
+  arbitrary paths such as /openapi.json and /llms.txt — a catch-all, not a
+  document. No WellKnown or SecurityTxt pointer is emitted, because nothing was
+  actually served.
+hosts:
+  - host: www.pillarbiosci.com
+    note: Corporate site (WordPress). Every /.well-known/ path returns the WordPress 404 template.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: pivat.pillarbiosci.com
+    note: >-
+      PiVAT cloud application (React SPA behind a login). The edge returns 403 for
+      every /.well-known/ path. Unknown non-well-known paths return HTTP 200 with
+      the same 1,535-byte SPA shell, which is a catch-all and NOT a document.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        file: null
+  - host: pivat.pillar-biosciences.com
+    note: >-
+      Legacy PiVAT version portal (static page linking to the current PiVAT
+      release host). Same 403 posture on /.well-known/.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        file: null
+summary:
+  hosts_probed: 3
+  documents_probed: 21
+  documents_served: 0
+  security_txt: false
+  api_catalog: false
+  agent_card: false

@@ -1,0 +1,17 @@
+generated: '2026-08-26'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.pillarbiosci.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 28 12:04:06 2026 GMT
+  hsts: true
+  hsts_max_age: 300
+domains:
+- domain: pillarbiosci.com
+  dnssec: true
+  caa: []
+  spf: false
+  dmarc: true
+  dmarc_policy: none

@@ -1,0 +1,56 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://pillar-panel-user-guides.s3.amazonaws.com/RN-0025+-+PiVAT+RUO+SW+Release+Notes+2023.1.0.pdf
+  (HTTP 200, application/pdf, fetched and text-extracted 2026-08-26)
+name: Pillar Biosciences PiVAT release notes
+description: >-
+  Pillar Biosciences publishes no web changelog. Software change history for
+  PiVAT is distributed as controlled, revision-numbered PDF release notes from
+  the company's own S3 documentation bucket. This artifact records what those
+  documents actually contain — it is a PDF-only change record, which is why the
+  format field below says so plainly.
+product: PiVAT (Pillar Variant Analysis Toolkit), research-use-only build
+format: pdf
+web_changelog: false
+feed: null
+versioning:
+  scheme: calendar
+  pattern: 'YYYY.MINOR.PATCH'
+  current_version: '2023.1.0'
+  observed_versions:
+    - '2023.1.0'
+    - '2022.1.3'
+  note: >-
+    2022.1.3 is observed from a distributor-hosted PiVAT portal
+    (pivat2022-1-3.zg-bio.com); 2023.1 is the version the Pillar version portal
+    at pivat.pillar-biosciences.com links to as "Current Version".
+entries:
+  - version: '2023.1.0'
+    date: '2023-07-25'
+    document: 'RN-0025 Revision 2 — RUO PiVAT Software Release Notes'
+    url: https://pillar-panel-user-guides.s3.amazonaws.com/RN-0025+-+PiVAT+RUO+SW+Release+Notes+2023.1.0.pdf
+    breaking: unknown
+    highlights:
+      - >-
+        cfDNA CNV caller: new CNV algorithm using an advanced Bayesian
+        non-parametric method for improved sensitivity and specificity in
+        cell-free DNA copy number amplification calling.
+      - Enabled on the oncoReveal Core LBx panel (P-LBX-01).
+    note: >-
+      Only the leading "Changes in 2023.1.0 / New Features" section was extracted
+      verbatim; the document is 14 pages and the remainder is not reproduced here.
+gaps:
+  - >-
+    No dated, human-browsable changelog page exists on pillarbiosci.com — a
+    reader has to already know the release-notes PDF filename to find it.
+  - >-
+    Release notes are not linked from a stable, versioned index; the S3 bucket
+    is not browsable.
+  - >-
+    No RSS/Atom feed, no per-release permalink, and no machine-readable version
+    manifest.
+summary:
+  entry_count: 1
+  latest_version: '2023.1.0'
+  latest_date: '2023-07-25'

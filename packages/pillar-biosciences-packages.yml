@@ -1,0 +1,121 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://github.com/Pillar-Biosciences-Inc (GitHub REST API, 2026-08-26) plus
+  registry lookups on npm, PyPI, RubyGems, crates.io, NuGet, Maven Central and
+  pkg.go.dev.
+name: Pillar Biosciences packages
+description: >-
+  Pillar Biosciences publishes NO API client SDK in any package registry. What it
+  does publish is a small set of first-party open-source BIOINFORMATICS tools on
+  GitHub — CNV callers, a methylation pipeline and batch-effect notebooks — none
+  of which are distributed through a package registry and none of which is a
+  client library for a Pillar API. They are recorded here because they are real,
+  first-party, dated, licensed software artifacts; they are deliberately NOT
+  wired as `type: SDKs`, because crediting an sdk_count for research pipelines
+  that wrap no API would be false credit.
+registries_searched:
+  - registry: npm
+    query: pillar biosciences / pivat / oncoreveal
+    result: no first-party package
+  - registry: pypi
+    query: pivat / pillarbio / oncoreveal
+    result: no first-party package (pypi.org/pypi/pivat/json -> 404)
+  - registry: rubygems
+    result: no first-party package
+  - registry: crates.io
+    result: no first-party package
+  - registry: nuget
+    result: no first-party package
+  - registry: maven-central
+    result: no first-party package
+  - registry: pkg.go.dev
+    result: no first-party package
+packages:
+  - name: StateCNV
+    official: true
+    first_party: true
+    kind: bioinformatics-tool
+    language: Python
+    registry: github
+    url: https://github.com/Pillar-Biosciences-Inc/StateCNV
+    description: A state-space CNV caller with disease profiling.
+    license: MIT
+    version: null
+    published: null
+    last_commit: '2025-08-04'
+    note: >-
+      Source-available on GitHub only. No tags and no GitHub releases, so there
+      is no published version to record — `version: null` here means "checked,
+      the project ships no versioned release", not "not checked".
+  - name: BayesCNV
+    official: true
+    first_party: true
+    kind: bioinformatics-tool
+    language: Python
+    registry: github
+    url: https://github.com/Pillar-Biosciences-Inc/BayesCNV
+    description: A Bayesian copy number variant detection algorithm.
+    license: GPL-3.0
+    version: null
+    published: null
+    last_commit: '2025-12-08'
+    note: No tags, no releases, no registry distribution.
+  - name: BatchDetect
+    official: true
+    first_party: true
+    kind: bioinformatics-tool
+    language: Jupyter Notebook
+    registry: github
+    url: https://github.com/Pillar-Biosciences-Inc/BatchDetect
+    description: Detecting batch heterogeneity via likelihoods.
+    license: GPL-2.0
+    version: null
+    published: null
+    last_commit: '2026-03-07'
+    note: No tags, no releases, no registry distribution.
+  - name: CustomPerformanceCNV
+    official: true
+    first_party: true
+    kind: bioinformatics-tool
+    language: Jupyter Notebook
+    registry: github
+    url: https://github.com/Pillar-Biosciences-Inc/CustomPerformanceCNV
+    description: >-
+      Custom CNV performance analysis notebooks. The repository carries no
+      description of its own on GitHub.
+    license: MIT
+    version: null
+    published: null
+    last_commit: '2026-04-08'
+    note: No tags, no releases, no registry distribution.
+  - name: methylation
+    official: true
+    first_party: true
+    kind: bioinformatics-pipeline
+    language: Python
+    registry: github
+    url: https://github.com/Pillar-Biosciences-Inc/methylation
+    description: An open-source, Bismark-based pipeline for processing methylation sequencing data.
+    license: GPL-3.0
+    version: null
+    published: null
+    last_commit: '2023-05-08'
+    note: >-
+      No tags, no releases, no registry distribution. Last commit 2023-05-08 —
+      the oldest first-party project in the org.
+forks:
+  note: >-
+    The GitHub org also carries four upstream forks (django, ddt, xdocreport,
+    cromwell). They are third-party projects, not Pillar software, and are
+    excluded from packages[] above.
+  repositories:
+    - https://github.com/Pillar-Biosciences-Inc/django
+    - https://github.com/Pillar-Biosciences-Inc/ddt
+    - https://github.com/Pillar-Biosciences-Inc/xdocreport
+    - https://github.com/Pillar-Biosciences-Inc/cromwell
+summary:
+  package_count: 5
+  sdk_count: 0
+  registry_packages: 0
+  official_count: 5

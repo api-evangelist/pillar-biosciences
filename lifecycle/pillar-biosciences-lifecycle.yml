@@ -1,0 +1,56 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://www.pillarbiosci.com/technology/pivat/,
+  https://pivat.pillar-biosciences.com/ (PiVAT version portal), and PiVAT release
+  notes RN-0025 Rev 2 — all fetched 2026-08-26.
+name: Pillar Biosciences lifecycle
+description: >-
+  Lifecycle posture for Pillar Biosciences. There is no API to version, so this
+  records the lifecycle of the PiVAT SOFTWARE product instead: a calendar-year
+  version scheme, a public version portal that names the current release, and the
+  absence of every runtime lifecycle signal an integrator would want.
+api_versioning:
+  applicable: false
+  reason: Pillar publishes no API, so there is no API version scheme, header, or path segment.
+product_versioning:
+  product: PiVAT
+  scheme: calendar
+  pattern: 'YYYY.MINOR.PATCH'
+  current_version: '2023.1.0'
+  version_portal:
+    url: https://pivat.pillar-biosciences.com/
+    http_status: 200
+    note: >-
+      A static portal page that lists "Current Version" and links to the
+      per-version host for that release (https://pivat2023-1.pillar-biosciences.com/).
+      Probed 2026-08-26 that per-version host returned HTTP 503.
+deprecation_policy:
+  published: false
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No RFC 8594 Sunset/Deprecation header surface exists (no API), and no written
+    end-of-life or version-support policy is published for PiVAT releases. The
+    only end-of-life signal visible from outside is that a previous version host
+    stops being linked from the version portal.
+status_page:
+  published: false
+  url: null
+  note: >-
+    No status.pillarbiosci.com, no statuspage.io/Instatus/BetterStack page, and
+    no uptime or incident history for cloud PiVAT was found. Cloud PiVAT is a
+    HIPAA-scoped hosted service with no public availability reporting.
+sla:
+  published: false
+  note: No public SLA or uptime commitment. Terms are presumably contractual; nothing is published.
+support:
+  channel: contact-form
+  url: https://www.pillarbiosci.com/contact/
+  http_status: 200
+  note: A single corporate contact form. No developer support channel, forum, or community.
+gaps:
+  - No status page for cloud-based PiVAT.
+  - No deprecation or version-support policy for PiVAT releases.
+  - No SLA.
+  - Per-version host pivat2023-1.pillar-biosciences.com returned 503 when probed 2026-08-26.

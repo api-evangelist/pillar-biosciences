@@ -1,0 +1,101 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://www.pillarbiosci.com/technology/pivat/ and
+  https://www.pillarbiosci.com/technology/ (fetched 2026-08-26), plus the PiVAT
+  RUO release notes RN-0025 Rev 2 (2023-07-25).
+name: Pillar Biosciences conformance
+description: >-
+  Standards and regulatory posture Pillar Biosciences states on its own public
+  pages. Pillar publishes NO machine-readable API contract, so every entry below
+  is a documentation claim rather than something derived from a spec, and each
+  one records the exact page it came from. No entry is asserted without a quote.
+entries:
+  - id: hipaa
+    name: HIPAA
+    conforms: true
+    basis: vendor-claim
+    evidence:
+      url: https://www.pillarbiosci.com/technology/pivat/
+      http_status: 200
+      quote: 'HIPAA Compliance — Cloud-based PiVAT is fully compliant with HIPAA requirements'
+    note: >-
+      A stated compliance claim on the PiVAT product page. Pillar publishes no
+      trust center, no certification report and no attestation document, so this
+      is the company's own assertion, not a verified audit.
+  - id: ivd
+    name: In Vitro Diagnostic (IVD) product line
+    conforms: true
+    basis: vendor-claim
+    evidence:
+      url: https://www.pillarbiosci.com/technology/pivat/
+      http_status: 200
+      quote: 'the IVD version of PiVAT is available with Pillar''s IVD products'
+    note: >-
+      Pillar maintains a separate IVD product line (site navigation carries an
+      "IVD Products" section) alongside research-use-only kits. A CE-IVD PiVAT
+      user manual (UM-0038) is published on the company's own domain.
+  - id: ruo
+    name: Research Use Only (RUO) labelling
+    conforms: true
+    basis: vendor-document
+    evidence:
+      url: https://pillar-panel-user-guides.s3.amazonaws.com/RN-0025+-+PiVAT+RUO+SW+Release+Notes+2023.1.0.pdf
+      http_status: 200
+      quote: 'Legal Notice — For Research Use Only'
+    note: The RUO PiVAT software is explicitly labelled research use only in its release notes.
+  - id: oncokb
+    name: OncoKB knowledge base integration
+    conforms: true
+    basis: vendor-claim
+    evidence:
+      url: https://www.pillarbiosci.com/technology/pivat/
+      http_status: 200
+      quote: >-
+        OncoKB integration: Cloud-PiVAT users also have the option to generate
+        tertiary analysis reports for Pillar panels using OncoKB, an
+        FDA-recognized oncology knowledge base.
+    note: >-
+      An integration with an external knowledge base, consumed by Pillar — not a
+      contract Pillar exposes to third parties.
+domain_standards:
+  note: >-
+    0.12.0 domain_standard_conformance is REWARD-ONLY and reads the CONTRACT, not
+    a marketing page. Pillar publishes no contract, so nothing can be awarded
+    here. The probes below were run against the healthcare/genomics standards
+    shortlist and are recorded as honest misses, not as penalties.
+  probed:
+    - standard: HL7 FHIR
+      found: false
+      detail: No FHIR base URL, CapabilityStatement or FHIR resource shape on any Pillar host.
+    - standard: HL7 v2 messaging
+      found: false
+      detail: >-
+        No ORU^R01 / OML^O21 message documentation published. PiVAT's stated
+        integration surface is file formats (FASTQ, BAM, VCF, PDF), not messaging.
+    - standard: GA4GH (htsget / Beacon / Data Repository Service)
+      found: false
+      detail: No GA4GH-conformant endpoint published on any Pillar host.
+    - standard: Phenopackets / VRS
+      found: false
+      detail: Not referenced in any public Pillar document reviewed.
+  awarded: none
+interchange_formats:
+  note: >-
+    Pillar's actual, published machine-readable interface is bioinformatics FILE
+    formats, not an API. Recorded here because it is the real integration surface
+    a lab would build against.
+  formats:
+    - FASTQ (paired-end preferred)
+    - BAM
+    - VCF
+    - PDF (report output)
+  evidence:
+    url: https://www.pillarbiosci.com/technology/pivat/
+    http_status: 200
+    quote: 'formats: FASTQ files (paired-end preferred), BAM, VCF, PDF'
+summary:
+  entries_total: 4
+  conforms_true: 4
+  domain_standard_awarded: false
+  derived_from_contract: false

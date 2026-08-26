@@ -1,0 +1,31 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Full walk of the published page sitemap
+  (https://www.pillarbiosci.com/wp-sitemap-posts-page-1.xml, HTTP 200) on
+  2026-08-26 — 52 pages, none of which is a pricing or plans page.
+name: Pillar Biosciences plans and pricing
+description: >-
+  Pillar Biosciences publishes no pricing of any kind. It sells kitted NGS panels
+  and the PiVAT analysis software through a direct sales and distributor motion;
+  the only commercial call to action anywhere on the site is a contact form.
+  There is no self-serve tier, no per-sample list price, no PiVAT licence price,
+  and no quota or overage schedule.
+model: contact-sales
+self_serve: false
+free_tier: false
+trial: false
+currency: null
+plans: []
+plan_count: 0
+sales_contact:
+  url: https://www.pillarbiosci.com/contact/
+  http_status: 200
+distribution:
+  note: >-
+    Pillar sells partly through named distribution partners; a partner list is
+    published at https://www.pillarbiosci.com/company/distribution-partners/.
+    Pricing is not published there either.
+note: >-
+  plan_count is a real, probed zero, not an unmeasured field: every page in the
+  published sitemap was enumerated and no pricing page exists.
