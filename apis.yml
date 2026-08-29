@@ -16,6 +16,17 @@ description: >-
   Pillar publishes no public API, SDK or developer program; PiVAT's integration
   surface is bioinformatics file formats (FASTQ, BAM, VCF, PDF) behind a
   customer login.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.pillarbiosci.com/wp-content/uploads/elementor/thumbs/Pillar_biosciences_logo-scaled-rsdcx7op9xcoyh7jq90gxuj6f8dx4edt9do6jp6ees.png
 url: https://raw.githubusercontent.com/api-evangelist/pillar-biosciences/refs/heads/main/apis.yml
 x-type: company
