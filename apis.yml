@@ -27,6 +27,19 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: low
+  source:
+  - plans
+  - security
+  generated: '2026-09-03'
+  method: derived
 image: https://www.pillarbiosci.com/wp-content/uploads/elementor/thumbs/Pillar_biosciences_logo-scaled-rsdcx7op9xcoyh7jq90gxuj6f8dx4edt9do6jp6ees.png
 url: https://raw.githubusercontent.com/api-evangelist/pillar-biosciences/refs/heads/main/apis.yml
 x-type: company
