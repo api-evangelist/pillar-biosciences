@@ -64,5 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pillar Biosciences is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Pillar Biosciences is a Natick, Massachusetts molecular diagnostics company, founded in 2014, that develops targeted next-generation sequencing (NGS) solutions for precision oncology. Its proprietary SLIMamp (Stem-Loop Inhibition Mediated amplification) chemistry enables highly multiplexed, single-tube PCR library preparation from as little as 2.5 ng of DNA, and its oncoReveal panel portfolio covers solid tumour tissue, liquid biopsy, haematologic malignancy, BRCA/HRD/methylation and inherited disease testing, alongside an InheritReveal line and a VersaTile machine-learning panel-design platform. Sequencing data is processed by PiVAT (Pillar Variant Analysis Toolkit), a secondary-analysis pipeline available as a local install or a HIPAA-scoped cloud deployment, with optional OncoKB-powered tertiary reporting. Pillar ships both research-use-only kits and an IVD product line, and raised a $34.5M round led by Illumina in 2025. Pillar publishes no public API, SDK or developer program; PiVAT's integration surface is bioinformatics file formats (FASTQ, BAM, VCF, PDF) behind a customer login.
+
+**Areas:** Company · Life Sciences · Genomics · Molecular Diagnostics · Next-Generation Sequencing · Precision Oncology · Bioinformatics · Healthcare · Laboratory Software
+
+## Pillar Biosciences on APIs.io
+
+Everything profiled for Pillar Biosciences is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pillar-biosciences/](https://apis.io/providers/pillar-biosciences/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Pillar Biosciences Domain Security](https://apis.io/security/pillar-biosciences/pillar-biosciences-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Pillar Biosciences Plans Pricing](https://apis.io/plans/pillar-biosciences/pillar-biosciences-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.pillarbiosci.com/)
+- [Documentation](https://www.pillarbiosci.com/resources/)
+- [Support](https://www.pillarbiosci.com/contact/)
+- [Blog](https://www.pillarbiosci.com/company/pillar-news/)
+- [Privacy policy](https://www.pillarbiosci.com/privacy-policy/)
+- [GitHub](https://github.com/Pillar-Biosciences-Inc)
+
+## API Evangelist rating
+
+**Kin Score 15.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 18.4 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pillar-biosciences/](https://apis.io/providers/pillar-biosciences/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pillar Biosciences: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pillar-biosciences/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
